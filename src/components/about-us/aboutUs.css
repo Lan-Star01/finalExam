@@ -1,0 +1,18 @@
+.about-us-container {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+h2 {
+  margin: 30px 0;
+
+}
+
+.company-logo {
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,125 @@
+.navbar {
+    background-color: #E2A76F;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    max-width: 1500px;
+}
+
+.logo {
+    color: #92571F;
+    align-items: center;
+    display: flex;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+    flex-grow: 1;
+}
+.img {
+    margin-right: 13px;
+    width: 48px;
+    height: 48px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    margin-right: 2rem;
+}
+
+.links{
+    color: #92571F;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    height: 100%;
+    border-bottom: 3px solid transparent;
+}
+
+.navIcon{
+    display: none;
+}
+
+.item {
+    line-height: 40px;
+    margin-right: 1rem;
+}
+
+.item:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width .7s ease, background-color .5s ease;
+}
+
+.item:hover::after {
+    width: 100%;
+    background: #561B00;
+}
+
+
+.item .active{
+    color: #4d2310;
+    border: 1px solid #4d2310;
+}
+
+@media screen and (max-width: 1008px) {
+    .menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-top: 1pxsolid rgb(233, 233, 233);
+      position: absolute;
+      top: 60px;
+      left: -110%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+
+    .menu.active {
+        background: #E2A76F;
+        left: 0px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .item .active {
+        color: #4d2310;
+        border: none;
+      }
+
+    .links {
+        padding: 1.5rem;
+        width: 100%;
+        display: table;
+    }
+    
+    .navIcon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 30%);
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: #92571F;
+    }
+
+}
